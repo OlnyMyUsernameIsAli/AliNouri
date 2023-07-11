@@ -1,0 +1,27 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes shake {
+    from {
+        margin-left: 10px;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
