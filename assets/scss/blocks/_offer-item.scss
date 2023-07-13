@@ -1,0 +1,143 @@
+@media screen and (min-width: 768) {
+    .ItemByOff {
+        padding: 65px 0 70px 0;
+    }
+}
+
+.ItemByOff {
+    padding: 100px 0 95px 0;
+    background-color: #EEF6EB;
+
+    .ItemByOff__div--heading {
+        margin-bottom: 50px;
+
+        h4 {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 10px;
+            color: $primary-color;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: $special-font;
+            text-transform: capitalize;
+        }
+
+        h4::after {
+            position: absolute;
+            content: "";
+            width: 65px;
+            height: 23px;
+            top: 3px;
+            right: -80px;
+            background: url("../images/heading_shapes_1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+    }
+
+    .ItemByOff_slider {
+
+        .prevArrow {
+            width: 40px;
+            height: 40px;
+            top: -65px;
+            right: 62px;
+            background: $primary-color;
+            line-height: 40px;
+            text-align: center;
+            color: $white-color;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            transition: all linear .5s;
+            cursor: pointer;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            border-radius: 10px;
+            @include PerfectCenter();
+            width: 420px;
+            height: 249px;
+        }
+
+        .offer__item {
+            position: relative;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            padding: 25px 20px 25px 195px;
+            border: 10px solid $white-color;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            span {
+                @include PerfectCenter ();
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                top: 48px;
+                left: 127px;
+                padding: 10px;
+                background: $primary-color;
+                color: $white-color;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 18px;
+                text-align: center;
+                text-transform: capitalize;
+                border: 2px solid $white-color;
+                border-radius: 50%;
+            }
+
+            .title {
+                display: block;
+                margin: 10px 0px 5px;
+                text-transform: capitalize;
+                font-size: 20px;
+                font-weight: 700;
+                transition: all linear .5s;
+                color: $black-color;
+                font-family: $header-font;
+            }
+
+            p {
+                overflow: hidden;
+            }
+
+            ul {
+                margin-top: 15px;
+            }
+
+            li a {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+                background: $primary-color;
+                text-align: center;
+                font-size: 14px;
+                line-height: 30px;
+                color: $white-color;
+                transition: all linear .5s;
+                border-radius: 50%;
+            }
+        }
+    }
+}

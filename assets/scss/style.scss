@@ -1,5 +1,6 @@
-@import './blocks/variables';
-@import './blocks/mixins';
-@import './blocks/resets';
-@import './blocks/Animations';
+@import './shared/variables';
+@import './shared/mixins';
+@import './shared/resets';
+@import './shared/Animations';
 @import './blocks/header';
+@import './blocks/offer-item';
