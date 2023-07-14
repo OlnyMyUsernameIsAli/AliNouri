@@ -1,4 +1,4 @@
-var swiper = new Swiper(".team_slider", {
+var swiper = new Swiper(".download_slider", {
     spaceBetween: 0,
     centeredSlides: false,
     loop: true,
@@ -15,7 +15,13 @@ var swiper = new Swiper(".team_slider", {
       576: {
         slidesPerView: 2
       },
+      768: {
+        slidesPerView: 3
+      },
       992: {
+        slidesPerView: 2
+      },
+      1200: {
         slidesPerView: 3
       },
       1400: {

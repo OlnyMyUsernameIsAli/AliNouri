@@ -1215,4 +1215,218 @@ span {
     padding: 95px 0;
     margin-top: 100px;
   }
+}
+.ADSlider {
+  margin-top: 45px;
+}
+.ADSlider .ADSlider__div {
+  position: relative;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 25px;
+  overflow: hidden;
+}
+.ADSlider .ADSlider__div .text {
+  position: relative;
+  width: 50%;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+.ADSlider .ADSlider__div h5 {
+  font-family: "Oleo Script", cursive;
+  color: #ff7c08;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.ADSlider .ADSlider__div h2 {
+  color: #231f40;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+@media (min-width: 992px) {
+  .ADSlider .ADSlider__div .text h2 {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .ADSlider .ADSlider__div .text h2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1400px) {
+  .ADSlider .ADSlider__div .text h2 {
+    font-size: 28px;
+  }
+}
+.ADSlider .ADSlider__div a {
+  font-size: 17px;
+  font-weight: 700;
+  color: #231f40;
+  padding-bottom: 0px;
+  margin-top: 30px;
+  border-bottom: 1px solid #231f40;
+  text-transform: capitalize;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+@media (min-width: 768px) {
+  .ADSlider .ADSlider__div {
+    padding: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .ADSlider .ADSlider__div {
+    padding: 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .ADSlider .ADSlider__div {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ADSlider {
+    margin-top: 75px;
+  }
+}
+.downloadApp {
+  margin-top: 70px;
+}
+.downloadApp .downloadApp__div--bg {
+  height: auto;
+  margin-bottom: 25px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt {
+  background: rgba(35, 31, 64, 0.8);
+  height: 100%;
+  padding: 70px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt h5 {
+  color: #ff7c08;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Oleo Script", cursive;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+@media (min-width: 1400px) {
+  .downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt .div--txt h2 {
+    font-size: 48px;
+  }
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt ul li a {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  background: #ff7c08;
+  padding: 8px 25px;
+  border-radius: 5px;
+  margin: 5px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt ul li a span {
+  font-size: 35px;
+  color: white;
+  margin-right: 15px;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt ul li a p {
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt ul li a p span {
+  display: block;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+}
+.downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt ul li a:hover {
+  background: #eb0029;
+}
+@media (min-width: 992px) {
+  .downloadApp .downloadApp__div--bg .downloadApp__div--txt {
+    padding: 50px 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .downloadApp .downloadApp__div--bg .downloadApp__div--txt {
+    padding: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .downloadApp .downloadApp__div--bg {
+    height: 400px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .downloadApp .downloadApp__div--bg {
+    height: 450px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .downloadApp {
+    margin-top: 100px;
+  }
+}
+.download_slider .downloadApp__slider--img {
+  height: 380px;
+  margin: 0px 12px;
+}
+.download_slider .downloadApp__slider--img img {
+  height: 100%;
+}
+@media (min-width: 576px) {
+  .download_slider .downloadApp__slider--img {
+    height: 350px;
+  }
+}
+@media (min-width: 768px) {
+  .download_slider .downloadApp__slider--img {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .download_slider .downloadApp__slider--img {
+    height: 400px;
+  }
+}
+@media (min-width: 1400px) {
+  .download_slider .downloadApp__slider--img {
+    height: 450px;
+  }
 }/*# sourceMappingURL=style.css.map */
