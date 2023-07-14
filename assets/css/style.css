@@ -1,3 +1,4 @@
+@import '../animate/animate.min.css';
 html {
   scroll-behavior: smooth;
 }
@@ -334,6 +335,10 @@ h6 {
   right: -10px;
 }
 
+.ziro {
+  top: 0;
+}
+
 .header__banner {
   height: 100vh;
   overflow: hidden;
@@ -589,7 +594,7 @@ h6 {
   }
 }
 .ItemByOff {
-  padding: 100px 0 95px 0;
+  padding: 100px 0 1195px 0;
   background-color: #EEF6EB;
 }
 .ItemByOff .ItemByOff__div--heading {
