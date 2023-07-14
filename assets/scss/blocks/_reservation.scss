@@ -1,0 +1,146 @@
+.reservation__div--bg {
+    border-radius: 10px;
+    position: relative;
+    background: linear-gradient($gradiant-cover-color),  url(../images/reservation_bg.jpg);
+    background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+    .reservation__div--bg {
+    background: linear-gradient(112deg, transparent 46%, $gradiant-cover-color 46%), url(../images/reservation_bg.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .reservation {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .reservation h2 {
+        font-size: 30px;
+    }
+}
+
+.reservation {
+    margin-top: 70px;
+
+    .reservation__form {
+        position: relative;
+        padding: 50px;
+        z-index: 1;
+
+        button {
+            width: 100%;
+            border-radius: 4px;
+            background: $black-color;
+            margin-top: 5px;
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 25px;
+        padding-bottom: 6px;
+        color: $white-color;
+        text-transform: capitalize;
+        border-bottom: 1px solid $white-color;
+    }
+
+    .reservation__input {
+        margin-bottom: 20px;
+
+        label {
+            color: $white-color;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: capitalize;
+        }
+
+    }
+
+    .nice-select {
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 3px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        // box-sizing: border-box;
+        position: relative;
+        float: left;
+        clear: both;
+        border: 1px solid #eee;
+        font-family: $paragraph-font;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: all linear .4s;
+
+        .list {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+            box-sizing: border-box;
+            margin-top: 4px;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform-origin: 50% 0;
+            transform: scale(0.75) translateY(-21px);
+            transition: all 0.4s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.3s ease-out;
+            z-index: 9;
+        }
+
+        .nice-select.open .list {
+            width: 100%;
+            opacity: 1;
+
+        }
+
+        .selected {
+            font-weight: bold;
+        }
+
+        .focus {
+            background-color: #f6f6f6;
+        }
+
+        .option {
+            font-weight: 400;
+            line-height: 40px;
+            list-style: none;
+            min-height: 40px;
+            cursor: pointer;
+            outline: none;
+            padding-left: 18px;
+            padding-right: 29px;
+            text-align: left;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+    }
+
+    .nice-select::after {
+        display: block;
+        width: 5px;
+        height: 5px;
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        margin-top: -4px;
+        border-bottom: 2px solid #999;
+        border-right: 2px solid #999;
+        transform: rotate(45deg);
+        transition: all 0.15s ease-in-out;
+    }
+}

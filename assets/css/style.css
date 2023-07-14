@@ -91,6 +91,36 @@ button {
   cursor: pointer;
 }
 
+.common_btn::after {
+  width: 23px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  content: "";
+  border-radius: 50%;
+  background: url(../images/arrow_icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.common_btn:hover {
+  background: #231f40;
+  padding: 12px 25px 12px 55px;
+  color: white;
+}
+
+.common_btn:hover::after {
+  left: 17px;
+  opacity: 1;
+}
+
 h1,
 h2,
 h3,
@@ -277,17 +307,44 @@ h6 {
   height: 100%;
 }
 .header__div--bottom .navbar-nav .nav-item {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header__div--bottom .navbar-nav .nav-item .nav-link {
+  position: relative;
+  width: 100%;
+  height: 100%;
   font-weight: 600;
   line-height: 80px;
-  padding: 0;
-  margin: 0px 15px;
+  padding: 0 16px;
   color: #231f40;
   text-transform: capitalize;
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
+}
+.header__div--bottom .navbar-nav .nav-item .nav-link:hover {
+  color: #ff7c08;
+}
+.header__div--bottom .navbar-nav .nav-item .active {
+  color: #ff7c08;
+}
+.header__div--bottom .navbar-nav #marker {
+  position: absolute;
+  left: 0px;
+  height: 4px;
+  width: 0px;
+  background-color: #000;
+  bottom: 16px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 4px;
 }
 .header__div--bottom .menu_icon {
   text-align: center;
@@ -470,33 +527,6 @@ h6 {
   top: 16px;
   right: 16px;
 }
-.header__banner .banner__div--text form button::after {
-  content: "";
-  position: absolute;
-  width: 23px;
-  height: 24px;
-  background: url("../images/arrow_icon.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  top: 50%;
-  left: 0px;
-  opacity: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 50%;
-  -webkit-transition: all linear 0.5s;
-  transition: all linear 0.5s;
-}
-.header__banner .banner__div--text form button:hover {
-  background: #231f40;
-  padding: 12px 25px 12px 55px;
-  color: white;
-}
-.header__banner .banner__div--text form button:hover::after {
-  left: 17px;
-  opacity: 1;
-}
 .header__banner .banner__imgContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -594,7 +624,7 @@ h6 {
   }
 }
 .ItemByOff {
-  padding: 100px 0 1195px 0;
+  padding: 100px 0 95px 0;
   background-color: #EEF6EB;
 }
 .ItemByOff .ItemByOff__div--heading {
@@ -733,4 +763,142 @@ h6 {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
   border-radius: 50%;
+}
+
+.reservation__div--bg {
+  border-radius: 10px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 124, 8, 0.9098039216))), url(../images/reservation_bg.jpg);
+  background: linear-gradient(rgba(255, 124, 8, 0.9098039216)), url(../images/reservation_bg.jpg);
+  background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .reservation__div--bg {
+    background: linear-gradient(112deg, transparent 46%, rgba(255, 124, 8, 0.9098039216) 46%), url(../images/reservation_bg.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .reservation {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .reservation h2 {
+    font-size: 30px;
+  }
+}
+.reservation {
+  margin-top: 70px;
+}
+.reservation .reservation__form {
+  position: relative;
+  padding: 50px;
+  z-index: 1;
+}
+.reservation .reservation__form button {
+  width: 100%;
+  border-radius: 4px;
+  background: #231f40;
+  margin-top: 5px;
+}
+.reservation h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 6px;
+  color: white;
+  text-transform: capitalize;
+  border-bottom: 1px solid white;
+}
+.reservation .reservation__input {
+  margin-bottom: 20px;
+}
+.reservation .reservation__input label {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.reservation .nice-select {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  float: left;
+  clear: both;
+  border: 1px solid #eee;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+}
+.reservation .nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+          box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 4px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(-21px);
+          transform: scale(0.75) translateY(-21px);
+  -webkit-transition: all 0.4s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.3s ease-out;
+  transition: all 0.4s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.3s ease-out;
+  z-index: 9;
+}
+.reservation .nice-select .nice-select.open .list {
+  width: 100%;
+  opacity: 1;
+}
+.reservation .nice-select .selected {
+  font-weight: bold;
+}
+.reservation .nice-select .focus {
+  background-color: #f6f6f6;
+}
+.reservation .nice-select .option {
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  cursor: pointer;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.reservation .nice-select::after {
+  display: block;
+  width: 5px;
+  height: 5px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -4px;
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

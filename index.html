@@ -106,34 +106,36 @@
                         <i class="far fa-times close_icon_close"></i>
                     </button>
                     <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav m-auto">
+
+                        <ul class="navbar-nav m-auto" id="navBar">
+                            <div id="marker"></div>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="#">
                                     Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="#">
                                     About
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="#">
                                     Menu
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="#">
                                     chefs
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="#">
                                     Blog
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="#">
                                     Contact
                                 </a>
                             </li>
@@ -531,6 +533,127 @@
             </div>
         </div>
     </section>
+
+    <!-- 
+        \\\\\\\\\\\\\\\
+        item by off end
+        ///////////////
+         -->
+
+    <!-- 
+        /////////////////
+        reservation start
+        \\\\\\\\\\\\\\\\\
+         -->
+
+    <section class="reservation">
+        <div class="container">
+            <div class="reservation__div--bg">
+                <div class="row">
+                    <div class="col-xl-6 ms-auto">
+                        <div class="reservation__form wow fadeInRight" data-wow-duration="1s"
+                            style="visibility: visible; animation-duration: 1s; animation-name: fadeInRight;">
+                            <h2>book a table</h2>
+                            <form>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="reservation__input">
+                                            <label for="name">name</label>
+                                            <input type="text" id="name" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="reservation__input">
+                                            <label for="email">email</label>
+                                            <input type="email" id="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="reservation__input">
+                                            <label for="phone">phone</label>
+                                            <input type="text" id="phone" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="reservation__input">
+                                            <label for="date">select date</label>
+                                            <input type="date" id="date">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="reservation__input">
+                                            <label>select time</label>
+                                            <select class="reservation_input clickable" style="display: none;">
+                                                <option value>select</option>
+                                                <option value>08.00 am to 09.00 am</option>
+                                                <option value>10.00 am to 11.00 am</option>
+                                                <option value>12.00 pm to 01.00 pm</option>
+                                                <option value>02.00 pm to 03.00 pm</option>
+                                                <option value>04.00 pm to 05.00 pm</option>
+                                            </select>
+                                            <div class="reservation_input nice-select clickable">
+                                                <span class="current">select</span>
+                                                <ul class="list">
+                                                    <li data-value class="option selected">select</li>
+                                                    <li data-value class="option">08.00 am to 09.00 am</li>
+                                                    <li data-value class="option">10.00 am to 11.00 am</li>
+                                                    <li data-value class="option">12.00 pm to 01.00 pm</li>
+                                                    <li data-value class="option">02.00 pm to 03.00 pm</li>
+                                                    <li data-value class="option">04.00 pm to 05.00 pm</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="reservation__input">
+                                            <label>select person</label>
+                                            <select class="reservation_input select_js" style="display: none;">
+                                                <option value>select</option>
+                                                <option value>1 person</option>
+                                                <option value>2 person</option>
+                                                <option value>3 person</option>
+                                                <option value>4 person</option>
+                                                <option value>5 person</option>
+                                            </select>
+                                            <div class="nice-select reservation_input select_js" tabindex="0">
+                                                <span class="current">select</span>
+                                                <ul class="list">
+                                                    <li data-value class="option selected">select</li>
+                                                    <li data-value class="option">1 person</li>
+                                                    <li data-value class="option">2 person</li>
+                                                    <li data-value class="option">3 person</li>
+                                                    <li data-value class="option">4 person</li>
+                                                    <li data-value class="option">5 person</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <button type="submit" class="common_btn">
+                                            confirm
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        \\\\\\\\\\\\\\\
+        reservation end
+        ///////////////
+         -->
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var headerButtom = document.querySelector(".headerButtom");
+            headerButtom.classList.toggle("ziro", window.scrollY > 680);
+        })
+    </script>
     <script src="./assets/dist/js/bootstrap.bundle.js"></script>
     <script src="./assets/fonts/Font-Awesome.js"></script>
     <script src="./assets/swiper/swiper-bundle.min.js"></script>
@@ -539,11 +662,24 @@
     <script>
         new WOW().init();
     </script>
-    <script>
-        window.addEventListener("scroll", function(){
-            var headerButtom = document.querySelector(".headerButtom");
-            headerButtom.classList.toggle("ziro", window.scrollY > 680);
+    <script type="text/javascript">
+        var marker = document.querySelector('#marker');
+        var item = document.querySelectorAll('.nav-link');
+        function indicator(e) {
+            marker.style.left = e.offsetLeft + "px";
+            marker.style.width = e.offsetWidth + "px";
+        }
+        item.forEach(link => {
+            link.addEventListener('click', (e) => {
+                indicator(e.target);
+            })
         })
+        // const activePage = window.location.pathname;
+        // const navLinks = document.querySelectorAll('.nav-link').forEach(link => {
+        //     if (link.href.includes(`${activePage}`)) {
+        //         link.classList.add('active');
+        //     }
+        // })
     </script>
 </body>
 

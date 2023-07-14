@@ -87,6 +87,34 @@ button {
     cursor: pointer;
 }
 
+.common_btn::after {
+    width: 23px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    content: "";
+    border-radius: 50%;
+    background: url(../images/arrow_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all linear .5s;
+}
+
+.common_btn:hover {
+    background: $black-color;
+    padding: 12px 25px 12px 55px;
+    color: $white-color;
+}
+
+.common_btn:hover::after {
+    left: 17px;
+    opacity: 1;
+}
+
 h1,
 h2,
 h3,
