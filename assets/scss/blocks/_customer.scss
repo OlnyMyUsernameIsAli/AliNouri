@@ -1,0 +1,108 @@
+.customer {
+    background-image: url('../images/testimonial_bg.jpg');
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding-top: 60px;
+    padding-bottom: 70px;
+
+    .customer__div {
+        position: relative;
+        margin-top: 105px;
+        padding: 15px 0px 15px 15px;
+        margin: 105px 12px 0 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .customer__div--img {
+            position: absolute;
+            top: -80px;
+            width: 150px;
+            height: 150px;
+            border: 5px solid $white-color;
+            box-shadow: $box-shadow;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 0;
+            z-index: 9;
+        }
+
+        .customer__div--txt {
+            position: relative;
+            background: $black-color;
+            padding: 90px 30px 40px 30px;
+            border-radius: 25px;
+
+            h4 {
+                position: relative;
+                color: $white-color;
+                margin-bottom: 5px;
+                font-size: 30px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: capitalize;
+            }
+
+            h4::after,
+            h4::before {
+                position: absolute;
+                content: "";
+                width: 40px;
+                height: 40px;
+                top: 0px;
+                left: 15px;
+                background: url('../images/testi_quot.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 100;
+            }
+
+            h4::before {
+                transform: rotate(180deg);
+                left: auto;
+                right: 15px;
+            }
+
+            .textWhite {
+                color: $white-color;
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            .feedback {
+                color: #e7e5e5;
+                text-align: center;
+                margin: 20px 0px 25px 0px;
+            }
+
+            .rating {
+                display: block;
+                font-size: 18px;
+                text-align: center;
+                color: $primary-color;
+            }
+        }
+    }
+
+    .customer__div::after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: $primary-color;
+        border-radius: 25px;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 992px) {
+    .customer {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+}
