@@ -8,40 +8,6 @@
     padding: 100px 0 95px 0;
     background-color: #EEF6EB;
 
-    .ItemByOff__div--heading {
-        margin-bottom: 50px;
-
-        h4 {
-            display: inline-block;
-            position: relative;
-            margin-bottom: 10px;
-            color: $primary-color;
-            font-size: 24px;
-            font-weight: 600;
-            font-family: $special-font;
-            text-transform: capitalize;
-        }
-
-        h4::after {
-            position: absolute;
-            content: "";
-            width: 65px;
-            height: 23px;
-            top: 3px;
-            right: -80px;
-            background: url("../images/heading_shapes_1.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        h2 {
-            font-size: 35px;
-            font-weight: 800;
-            text-transform: capitalize;
-        }
-    }
-
     .ItemByOff_slider {
 
         .prevArrow {
@@ -137,6 +103,16 @@
                 color: $white-color;
                 transition: all linear .5s;
                 border-radius: 50%;
+            }
+
+            li a:hover {
+                background-color: $black-color;
+            }
+        }
+
+        .offer__item:hover {
+            .title {
+                color: $primary-color;
             }
         }
     }

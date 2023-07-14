@@ -15,10 +15,6 @@ body {
           box-sizing: border-box !important;
 }
 
-@font-face {
-  font-family: "Oleo Script";
-  src: url("../fonts/OleoScript-Regular.ttf");
-}
 a {
   text-decoration: none !important;
   display: inline-block !important;
@@ -38,15 +34,6 @@ li {
   list-style-type: none;
 }
 
-p,
-a,
-span {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-  color: #484747;
-}
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -59,6 +46,67 @@ img {
      object-fit: cover;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes shake {
+  from {
+    margin-left: 10px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes shake {
+  from {
+    margin-left: 10px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+@font-face {
+  font-family: "Oleo Script";
+  src: url("../fonts/OleoScript-Regular.ttf");
+}
 input,
 textarea {
   width: 100%;
@@ -121,6 +169,37 @@ button {
   opacity: 1;
 }
 
+.section__heading {
+  margin-bottom: 25px;
+}
+.section__heading h4 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+  color: #ff7c08;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Oleo Script", cursive;
+  text-transform: capitalize;
+}
+.section__heading h4::after {
+  position: absolute;
+  content: "";
+  width: 65px;
+  height: 23px;
+  top: 3px;
+  right: -80px;
+  background: url("../images/heading_shapes_1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section__heading h2 {
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
 h1,
 h2,
 h3,
@@ -133,63 +212,15 @@ h6 {
   color: #231f40;
 }
 
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+p,
+a,
+span {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #484747;
 }
 
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes shake {
-  from {
-    margin-left: 10px;
-  }
-  to {
-    margin-left: 0;
-  }
-}
-@keyframes shake {
-  from {
-    margin-left: 10px;
-  }
-  to {
-    margin-left: 0;
-  }
-}
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-}
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-}
 .header__div--top {
   width: 100%;
   height: 50px;
@@ -390,6 +421,10 @@ h6 {
   font-weight: 600;
   top: -10px;
   right: -10px;
+}
+.header__div--bottom .cart_icon:hover {
+  background: #ff7c08;
+  color: white;
 }
 
 .ziro {
@@ -627,36 +662,6 @@ h6 {
   padding: 100px 0 95px 0;
   background-color: #EEF6EB;
 }
-.ItemByOff .ItemByOff__div--heading {
-  margin-bottom: 50px;
-}
-.ItemByOff .ItemByOff__div--heading h4 {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 10px;
-  color: #ff7c08;
-  font-size: 24px;
-  font-weight: 600;
-  font-family: "Oleo Script", cursive;
-  text-transform: capitalize;
-}
-.ItemByOff .ItemByOff__div--heading h4::after {
-  position: absolute;
-  content: "";
-  width: 65px;
-  height: 23px;
-  top: 3px;
-  right: -80px;
-  background: url("../images/heading_shapes_1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.ItemByOff .ItemByOff__div--heading h2 {
-  font-size: 35px;
-  font-weight: 800;
-  text-transform: capitalize;
-}
 .ItemByOff .ItemByOff_slider .prevArrow {
   width: 40px;
   height: 40px;
@@ -763,6 +768,12 @@ h6 {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
   border-radius: 50%;
+}
+.ItemByOff .ItemByOff_slider .offer__item li a:hover {
+  background-color: #231f40;
+}
+.ItemByOff .ItemByOff_slider .offer__item:hover .title {
+  color: #ff7c08;
 }
 
 .reservation__div--bg {
@@ -901,4 +912,307 @@ h6 {
           transform: rotate(45deg);
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .menuItem {
+    margin-top: 95px;
+  }
+}
+.menuItem {
+  margin-top: 65px;
+}
+.menuItem .menu_filter {
+  height: 100%;
+  padding-bottom: 25px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.menuItem .menu_filter button {
+  padding: 5px 25px;
+  margin: 5px 0px 0px 10px;
+  color: #ff7c08;
+  border-radius: 4px;
+  background: white;
+  border: 1px solid #ff7c08;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .menu_filter button.active {
+  background: #ff7c08;
+  color: white;
+}
+.menuItem .menu_filter button:hover {
+  background: #ff7c08;
+  color: white;
+}
+.menuItem .grid .menuItem__product {
+  margin-top: 25px;
+  position: relative;
+  border-radius: 5px;
+  background: white;
+  -webkit-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.15);
+          box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.15);
+  margin-left: 12px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .grid .menuItem__product .product__img {
+  height: 220px;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+.menuItem .grid .menuItem__product .product__img img {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .grid .menuItem__product .product__txt {
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px;
+}
+.menuItem .grid .menuItem__product .product__txt .category {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: white;
+  font-family: "Oleo Script", cursive;
+  position: absolute;
+  top: -16px;
+  right: 0;
+  background: #ff7c08;
+  padding: 3px 15px;
+  -webkit-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.15);
+          box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.15);
+  border-radius: 4px 0px 0px 4px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .grid .menuItem__product .product__txt .category:hover {
+  color: #231f40;
+}
+.menuItem .grid .menuItem__product .product__txt .title {
+  display: block;
+  color: #231f40;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .grid .menuItem__product .product__txt .rating {
+  color: #ff9933;
+  font-size: 16px;
+  text-align: center;
+}
+.menuItem .grid .menuItem__product .product__txt .rating span {
+  position: relative;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.menuItem .grid .menuItem__product .product__txt .rating span::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  top: 11px;
+  left: 4px;
+  background: "Manrope", sans-serif;
+}
+.menuItem .grid .menuItem__product .product__txt .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ff7c08;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 13px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.menuItem .grid .menuItem__product .product__txt .price del {
+  color: #736f6f;
+  margin-left: 7px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.menuItem .grid .menuItem__product .product__txt .product__add-to-card {
+  position: absolute;
+  left: -12px;
+  bottom: 25px;
+  color: white;
+  background: #ff7c08;
+  padding: 6px 25px 6px 25px;
+  border-radius: 0px 4px 4px 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .grid .menuItem__product .product__txt .product__add-to-card::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: -19px;
+  left: 0px;
+  z-index: 1;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  border-top: 20px solid transparent;
+  border-right: 13px solid #d36606;
+}
+.menuItem .grid .menuItem__product .product__txt ul li a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #ff7c08;
+  background: white;
+  border: 1px solid #ff7c08;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 3px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.menuItem .grid .menuItem__product .product__txt ul li a:hover {
+  color: white;
+  background: #ff7c08;
+}
+.menuItem .grid .menuItem__product:hover {
+  margin-top: 20px;
+}
+.menuItem .grid .menuItem__product:hover .product__img img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.team {
+  padding: 65px 0;
+  margin-top: 70px;
+  background-color: #eef6eb;
+}
+.team .fullWidth {
+  display: inline-block;
+  width: 100%;
+}
+.team .teamCard {
+  border-radius: 10px;
+  background: white;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 25px 12px 0px 12px;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.team .teamCard .teamCard__img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  background: #ff7c08;
+  border: 10px solid white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.15);
+          box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.15);
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.team .teamCard .teamCard__img img {
+  border-radius: 50%;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.team .teamCard .teamCard__txt h4 {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #484747;
+  margin: 30px 0px 5px 0px;
+  text-transform: capitalize;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.team .teamCard .teamCard__txt p {
+  text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.team .teamCard .teamCard__txt ul {
+  margin-top: 27px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.team .teamCard .teamCard__txt ul li a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: rgba(255, 124, 8, 0.1294117647);
+  color: #ff7c08;
+  font-size: 16px;
+  margin: 0px 5px;
+  border-radius: 50%;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.team .teamCard .teamCard__txt ul li a:hover {
+  background: #ff7c08;
+  color: white;
+}
+.team .teamCard::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30%;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 50% 100%, 0 25%);
+          clip-path: polygon(0 0, 100% 0%, 100% 25%, 50% 100%, 0 25%);
+  background: #ff7c08;
+}
+.team .teamCard:hover {
+  margin-top: 20px;
+}
+.team .teamCard:hover .teamCard__img img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.team .teamCard:hover h4 {
+  color: #ff7c08;
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    padding: 95px 0;
+    margin-top: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

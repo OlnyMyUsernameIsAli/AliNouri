@@ -196,6 +196,11 @@
             }
         }
     }
+
+    .cart_icon:hover {
+        background: $primary-color;
+        color: $white-color;
+    }
 }
 
 .ziro {
@@ -345,34 +350,6 @@
                 top: 16px;
                 right: 16px;
             }
-
-            // .::after {
-            //     content: "";
-            //     position: absolute;
-            //     width: 23px;
-            //     height: 24px;
-            //     background: url('../images/arrow_icon.png');
-            //     background-position: center;
-            //     background-repeat: no-repeat;
-            //     background-size: contain;
-            //     top: 50%;
-            //     left: 0px;
-            //     opacity: 0;
-            //     transform: translateY(-50%);
-            //     border-radius: 50%;
-            //     transition: all linear .5s;
-            // }
-
-            // button:hover {
-            //     background: $black-color;
-            //     padding: 12px 25px 12px 55px;
-            //     color: $white-color;
-            // }
-
-            // button:hover::after {
-            //     left: 17px;
-            //     opacity: 1;
-            // }
         }
     }
 

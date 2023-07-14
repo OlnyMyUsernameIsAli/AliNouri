@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".ItemOffer", {
     // slidesPerView: 3,
     spaceBetween: 30,
     centeredSlides: false,
@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper", {
     fade: true,
     slidesPerGroupSkip: 1,
     autoplay: {
-      delay: 10000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     breakpoints: {

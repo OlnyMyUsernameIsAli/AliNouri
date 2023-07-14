@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Oleo Script';
+    src: url('../fonts/OleoScript-Regular.ttf');
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    border: 1px solid #eee;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+button {
+    border: none;
+    box-shadow: none !important;
+}
+
+.common_btn {
+    background: $primary-color;
+    text-transform: capitalize;
+    color: $white-color;
+    padding: 12px 40px 12px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    transition: all linear .5s;
+    cursor: pointer;
+}
+
+.common_btn::after {
+    width: 23px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    content: "";
+    border-radius: 50%;
+    background: url(../images/arrow_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all linear .5s;
+}
+
+.common_btn:hover {
+    background: $black-color;
+    padding: 12px 25px 12px 55px;
+    color: $white-color;
+}
+
+.common_btn:hover::after {
+    left: 17px;
+    opacity: 1;
+}
+
+.section__heading {
+    margin-bottom: 25px;
+
+    h4 {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 10px;
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: $special-font;
+        text-transform: capitalize;
+    }
+
+    h4::after {
+        position: absolute;
+        content: "";
+        width: 65px;
+        height: 23px;
+        top: 3px;
+        right: -80px;
+        background: url("../images/heading_shapes_1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 35px;
+        font-weight: 800;
+        text-transform: capitalize;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $header-font;
+    color: $black-color;
+}
+
+p,
+a,
+span {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: $paragraph-color;
+}
