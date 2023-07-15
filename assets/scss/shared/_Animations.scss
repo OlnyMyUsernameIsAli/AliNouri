@@ -25,3 +25,13 @@
         transform: scale(1.5);
     }
 }
+
+@keyframes scrollMovement {
+    from {
+        bottom: 30px;
+    }
+
+    to {
+        bottom: 50px;
+    }
+}
