@@ -395,6 +395,62 @@ span {
 }
 .header__div--bottom .toggle {
   background-color: #ff7c08;
+  position: relative;
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.header__div--bottom .toggle .menu__btn--shape {
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  border-radius: 50px;
+  background-color: white;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.header__div--bottom .toggle .top {
+  top: 25%;
+}
+.header__div--bottom .toggle .middle {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+.header__div--bottom .toggle .bottom {
+  bottom: 25%;
+}
+.header__div--bottom .toggle.active {
+  background-color: #231f40;
+}
+.header__div--bottom .toggle.active .top {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 45%;
+}
+.header__div--bottom .toggle.active .bottom {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  bottom: 45%;
+}
+.header__div--bottom .toggle.active .middle {
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
 }
 .header__div--bottom .navigation {
   position: absolute;
@@ -414,18 +470,20 @@ span {
           flex-direction: column;
 }
 .header__div--bottom .navigation ul .nav-item-mobile {
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   position: relative;
   list-style-type: none;
-  -webkit-transition: all linear 0.5s;
-  transition: all linear 0.5s;
+  -webkit-transition: opacity linear 0.5s, -webkit-transform linear 0.5s;
+  transition: opacity linear 0.5s, -webkit-transform linear 0.5s;
+  transition: opacity linear 0.5s, transform linear 0.5s;
+  transition: opacity linear 0.5s, transform linear 0.5s, -webkit-transform linear 0.5s;
   width: 100%;
   background-color: white;
   -webkit-transform: translateX(-150px);
           transform: translateX(-150px);
-  -webkit-transition-delay: calc(0.1s * var(--i));
-          transition-delay: calc(0.1s * var(--i));
+  -webkit-transition-delay: calc(0.25s * var(--i));
+          transition-delay: calc(0.25s * var(--i));
 }
 .header__div--bottom .navigation ul .nav-item-mobile a.nav-link-mobile {
   background-color: white;
@@ -440,16 +498,13 @@ span {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
-@media (max-width: 992px) {
-  .header__div--bottom .active ul .nav-item-mobile {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  .header__div--bottom .active ul .nav-item-mobile .nav-link-mobile:hover {
-    color: #ff7c08;
-  }
+.header__div--bottom .active ul .nav-item-mobile {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+.header__div--bottom .active ul .nav-item-mobile .nav-link-mobile:hover {
+  color: #ff7c08;
 }
 .header__div--bottom .menu_icon {
   text-align: center;
@@ -727,6 +782,11 @@ span {
   line-height: 40px;
 }
 
+@media (min-width: 992px) {
+  .active ul .nav-item-mobile {
+    visibility: hidden;
+  }
+}
 @media screen and (min-width: 768) {
   .ItemByOff {
     padding: 65px 0 70px 0;
@@ -800,8 +860,8 @@ span {
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 48px;
-  left: 127px;
+  top: 44px;
+  left: 143px;
   padding: 10px;
   background: #ff7c08;
   color: white;
@@ -850,6 +910,36 @@ span {
   color: #ff7c08;
 }
 
+@media (min-width: 576px) {
+  .offer__item span {
+    top: 35px !important;
+    left: 168px !important;
+  }
+}
+@media (min-width: 768px) {
+  .offer__item span {
+    top: 20px !important;
+    left: 227px !important;
+  }
+}
+@media (min-width: 992px) {
+  .offer__item span {
+    top: 44px !important;
+    left: 143px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .offer__item span {
+    top: 33px !important;
+    left: 173px !important;
+  }
+}
+@media (min-width: 1400px) {
+  .offer__item span {
+    top: 48px !important;
+    left: 127px !important;
+  }
+}
 .reservation__div--bg {
   border-radius: 10px;
   position: relative;
@@ -1084,6 +1174,9 @@ span {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
+.menuItem .grid .menuItem__product .product__txt .title:hover {
+  color: #ff7c08;
+}
 .menuItem .grid .menuItem__product .product__txt .rating {
   color: #ff9933;
   font-size: 16px;
@@ -1154,6 +1247,12 @@ span {
   transition: all linear 0.5s;
   border-top: 20px solid transparent;
   border-right: 13px solid #d36606;
+}
+.menuItem .grid .menuItem__product .product__txt .product__add-to-card:hover {
+  background-color: #231f40;
+}
+.menuItem .grid .menuItem__product .product__txt .product__add-to-card:hover::after {
+  border-right-color: #231f40;
 }
 .menuItem .grid .menuItem__product .product__txt ul li a {
   width: 35px;

@@ -59,8 +59,8 @@
                 position: absolute;
                 width: 60px;
                 height: 60px;
-                top: 48px;
-                left: 127px;
+                top: 44px;
+                left: 143px;
                 padding: 10px;
                 background: $primary-color;
                 color: $white-color;
@@ -115,5 +115,40 @@
                 color: $primary-color;
             }
         }
+    }
+}
+
+@media (min-width: 576px) {
+    .offer__item span {
+        top: 35px !important;
+        left: 168px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .offer__item span {
+        top: 20px !important;
+        left: 227px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .offer__item span {
+        top: 44px !important;
+        left: 143px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .offer__item span {
+        top: 33px !important;
+        left: 173px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .offer__item span {
+        top: 48px !important;
+        left: 127px !important;
     }
 }

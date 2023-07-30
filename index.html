@@ -102,9 +102,14 @@
                     <button class="navbar-toggler collapsed toggle" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <i class="far fa-bars menu_icon_bar"></i>
+                        <!-- <i class="far fa-bars menu_icon_bar"></i> -->
+                        <!-- <div class="menu__btn--container"> -->
+                            <div class="menu__btn--shape top"></div>
+                            <div class="menu__btn--shape middle"></div>
+                            <div class="menu__btn--shape bottom"></div>
+                        <!-- </div> -->
                     </button>
-                    
+
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav m-auto" id="navBar">
                             <div id="marker"></div>
@@ -1536,7 +1541,8 @@
         <section class="downloadApp">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp"
+                        style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
                         <div class="downloadApp__div--bg" style="background: url(./assets/images/download_img.png);">
                             <div class="downloadApp__div--txt">
                                 <div class="div--txt wow fadeInUp" data-wow-duration="1s"
@@ -2223,7 +2229,7 @@
         -->
     <script>
         let navigation = document.querySelector('.navigation');
-        document.querySelector('.toggle').onclick = function (){
+        document.querySelector('.toggle').onclick = function () {
             this.classList.toggle('active');
             navigation.classList.toggle('active');
         }
