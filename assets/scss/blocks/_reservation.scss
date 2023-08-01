@@ -1,13 +1,13 @@
 .reservation__div--bg {
     border-radius: 10px;
     position: relative;
-    background: linear-gradient($gradiant-cover-color),  url(../images/reservation_bg.jpg);
+    background: linear-gradient($gradiant-cover-color),  url(../images/reservation_bg.webp);
     background-size: cover;
 }
 
 @media screen and (min-width: 1200px) {
     .reservation__div--bg {
-    background: linear-gradient(112deg, transparent 46%, $gradiant-cover-color 46%), url(../images/reservation_bg.jpg);
+    background: linear-gradient(112deg, transparent 46%, $gradiant-cover-color 46%), url(../images/reservation_bg.webp);
     }
 }
 

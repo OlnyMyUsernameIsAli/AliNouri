@@ -17,14 +17,14 @@
 
             .div--txt {
                 h5 {
-                    color: $primary-color;
+                    color: $primary-color !important;
                     font-size: 25px;
                     text-align: center;
                     font-family: $special-font;
                 }
 
                 h2 {
-                    color: $white-color;
+                    color: $white-color !important;
                     font-size: 36px;
                     font-weight: 700;
                     text-align: center;

@@ -136,7 +136,7 @@ textarea {
 }
 
 button {
-  border: none;
+  border: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -225,7 +225,7 @@ h6 {
   margin: 0;
   padding: 0;
   font-family: "Barlow", sans-serif;
-  color: #231f40;
+  color: #231f40 !important;
 }
 
 p,
@@ -518,6 +518,9 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0px 10px;
 }
 .header__div--bottom .menu_icon li a {
   width: 40px;
@@ -525,7 +528,6 @@ span {
   font-weight: 600;
   color: #231f40;
   text-transform: capitalize;
-  margin: 0px 10px;
   padding: 0;
   position: relative;
   cursor: pointer;
@@ -667,7 +669,7 @@ span {
   font-size: 56px;
   font-weight: 700;
   text-transform: capitalize;
-  color: white;
+  color: white !important;
 }
 .header__banner .banner__div--text p {
   font-size: 18px;
@@ -943,14 +945,14 @@ span {
 .reservation__div--bg {
   border-radius: 10px;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 124, 8, 0.9098039216))), url(../images/reservation_bg.jpg);
-  background: linear-gradient(rgba(255, 124, 8, 0.9098039216)), url(../images/reservation_bg.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 124, 8, 0.9098039216))), url(../images/reservation_bg.webp);
+  background: linear-gradient(rgba(255, 124, 8, 0.9098039216)), url(../images/reservation_bg.webp);
   background-size: cover;
 }
 
 @media screen and (min-width: 1200px) {
   .reservation__div--bg {
-    background: linear-gradient(112deg, transparent 46%, rgba(255, 124, 8, 0.9098039216) 46%), url(../images/reservation_bg.jpg);
+    background: linear-gradient(112deg, transparent 46%, rgba(255, 124, 8, 0.9098039216) 46%), url(../images/reservation_bg.webp);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1499,13 +1501,13 @@ span {
           justify-content: center;
 }
 .downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt h5 {
-  color: #ff7c08;
+  color: #ff7c08 !important;
   font-size: 25px;
   text-align: center;
   font-family: "Oleo Script", cursive;
 }
 .downloadApp .downloadApp__div--bg .downloadApp__div--txt .div--txt h2 {
-  color: white;
+  color: white !important;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -1714,7 +1716,7 @@ span {
   }
 }
 .counter--section {
-  background-image: url("../images/counter_bg.jpg");
+  background-image: url("../images/counter_bg.webp");
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -1754,7 +1756,7 @@ span {
 .counter--section .counter__div .text h2 {
   display: inline-block;
   position: relative;
-  color: white;
+  color: white !important;
   font-size: 36px;
   font-weight: 700;
   margin-right: 25px;
@@ -1811,7 +1813,7 @@ span {
 }
 
 footer {
-  background: url("../images/footer_bg.jpg");
+  background: url("../images/footer_bg.webp");
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -1877,7 +1879,7 @@ footer .footer__content h3 {
   font-weight: 700;
   padding-bottom: 5px;
   margin-bottom: 12px;
-  color: white;
+  color: white !important;
   border-bottom: 1px solid #ff7c08;
   text-transform: capitalize;
 }
