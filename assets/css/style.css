@@ -788,6 +788,9 @@ span {
   .active ul .nav-item-mobile {
     visibility: hidden;
   }
+  .navigation {
+    display: none;
+  }
 }
 @media screen and (min-width: 768) {
   .ItemByOff {
@@ -1857,6 +1860,9 @@ footer .footer__content ul li a::after {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
 }
+footer .footer__content .social_link {
+  margin-bottom: 10px !important;
+}
 footer .footer__content .social_link li a {
   position: initial;
   width: 35px;
@@ -1878,7 +1884,7 @@ footer .footer__content h3 {
   font-size: 22px;
   font-weight: 700;
   padding-bottom: 5px;
-  margin-bottom: 12px;
+  margin: 20px 0 12px 0;
   color: white !important;
   border-bottom: 1px solid #ff7c08;
   text-transform: capitalize;
