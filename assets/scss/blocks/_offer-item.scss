@@ -1,154 +1,158 @@
 @media screen and (min-width: 768) {
-    .ItemByOff {
-        padding: 65px 0 70px 0;
-    }
+  .ItemByOff {
+    padding: 65px 0 70px 0;
+  }
 }
 
 .ItemByOff {
-    padding: 100px 0 95px 0;
-    background-color: #EEF6EB;
+  padding: 100px 0 95px 0;
+  background-color: #eef6eb;
 
-    .ItemByOff_slider {
-
-        .prevArrow {
-            width: 40px;
-            height: 40px;
-            top: -65px;
-            right: 62px;
-            background: $primary-color;
-            line-height: 40px;
-            text-align: center;
-            color: $white-color;
-            border-radius: 50%;
-            position: absolute;
-            z-index: 1;
-            transition: all linear .5s;
-            cursor: pointer;
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            border-radius: 10px;
-            @include PerfectCenter();
-            width: 420px;
-            height: 249px;
-        }
-
-        .offer__item {
-            position: relative;
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            padding: 25px 20px 25px 195px;
-            border: 10px solid $white-color;
-            border-radius: 5px;
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            span {
-                @include PerfectCenter ();
-                position: absolute;
-                width: 60px;
-                height: 60px;
-                top: 44px;
-                left: 143px;
-                padding: 10px;
-                background: $primary-color;
-                color: $white-color;
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 18px;
-                text-align: center;
-                text-transform: capitalize;
-                border: 2px solid $white-color;
-                border-radius: 50%;
-            }
-
-            .title {
-                display: block;
-                margin: 10px 0px 5px;
-                text-transform: capitalize;
-                font-size: 20px;
-                font-weight: 700;
-                transition: all linear .5s;
-                color: $black-color;
-                font-family: $header-font;
-            }
-
-            p {
-                overflow: hidden;
-            }
-
-            ul {
-                margin-top: 15px;
-            }
-
-            li a {
-                width: 30px;
-                height: 30px;
-                margin-right: 5px;
-                background: $primary-color;
-                text-align: center;
-                font-size: 14px;
-                line-height: 30px;
-                color: $white-color;
-                transition: all linear .5s;
-                border-radius: 50%;
-            }
-
-            li a:hover {
-                background-color: $black-color;
-            }
-        }
-
-        .offer__item:hover {
-            .title {
-                color: $primary-color;
-            }
-        }
+  .ItemByOff_slider {
+    .prevArrow {
+      width: 40px;
+      height: 40px;
+      top: -65px;
+      right: 62px;
+      background: $primary-color;
+      line-height: 40px;
+      text-align: center;
+      color: $white-color;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      transition: all linear 0.5s;
+      cursor: pointer;
     }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      border-radius: 10px;
+      @include PerfectCenter();
+      width: 420px;
+      height: 249px;
+    }
+
+    .offer__item {
+      position: relative;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      padding: 25px 0 25px 195px;
+      border: 10px solid $white-color;
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      span {
+        @include PerfectCenter();
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 44px;
+        left: 143px;
+        padding: 10px;
+        background: $primary-color;
+        color: $white-color;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+        text-align: center;
+        text-transform: capitalize;
+        border: 2px solid $white-color;
+        border-radius: 50%;
+      }
+
+      .title {
+        display: block;
+        margin: 10px 0px 5px;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 700;
+        transition: all linear 0.5s;
+        color: $black-color;
+        font-family: $header-font;
+      }
+
+      p {
+        width: 65%;
+        margin: 0 auto;
+      }
+
+      ul {
+        margin-top: 10px;
+        @include PerfectCenter();
+      }
+
+      li a {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        background: $primary-color;
+        text-align: center;
+        font-size: 14px;
+        line-height: 30px;
+        color: $white-color;
+        transition: all linear 0.5s;
+        border-radius: 50%;
+      }
+
+      li a:hover {
+        background-color: $black-color;
+      }
+    }
+
+    .offer__item:hover {
+      .title {
+        color: $primary-color;
+      }
+    }
+  }
 }
 
 @media (min-width: 576px) {
-    .offer__item span {
-        top: 35px !important;
-        left: 168px !important;
-    }
+  .offer__item span {
+    top: 35px !important;
+    left: 168px !important;
+  }
 }
 
 @media (min-width: 768px) {
-    .offer__item span {
-        top: 20px !important;
-        left: 227px !important;
-    }
+  .offer__item span {
+    top: 20px !important;
+    left: 227px !important;
+  }
 }
 
 @media (min-width: 992px) {
-    .offer__item span {
-        top: 44px !important;
-        left: 143px !important;
+  .offer__item {
+    padding-left: 150px;
+    span {
+      top: 44px !important;
+      left: 143px !important;
     }
+  }
 }
 
 @media (min-width: 1200px) {
-    .offer__item span {
-        top: 33px !important;
-        left: 173px !important;
-    }
+  .offer__item span {
+    top: 33px !important;
+    left: 173px !important;
+  }
 }
 
 @media (min-width: 1400px) {
-    .offer__item span {
-        top: 48px !important;
-        left: 127px !important;
-    }
+  .offer__item span {
+    top: 48px !important;
+    left: 127px !important;
+  }
 }

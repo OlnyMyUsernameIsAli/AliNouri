@@ -480,8 +480,8 @@ span {
   transition: opacity linear 0.5s, transform linear 0.5s, -webkit-transform linear 0.5s;
   width: 100%;
   background-color: white;
-  -webkit-transform: translateX(-150px);
-          transform: translateX(-150px);
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
   -webkit-transition-delay: calc(0.25s * var(--i));
           transition-delay: calc(0.25s * var(--i));
 }
@@ -632,8 +632,8 @@ span {
   position: absolute;
   width: 45px;
   height: 55px;
-  bottom: 40%;
-  left: 5%;
+  top: 5%;
+  left: 26%;
   z-index: 1;
   -webkit-animation: shake linear 1.5s infinite alternate;
           animation: shake linear 1.5s infinite alternate;
@@ -799,7 +799,7 @@ span {
 }
 .ItemByOff {
   padding: 100px 0 95px 0;
-  background-color: #EEF6EB;
+  background-color: #eef6eb;
 }
 .ItemByOff .ItemByOff_slider .prevArrow {
   width: 40px;
@@ -843,7 +843,7 @@ span {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  padding: 25px 20px 25px 195px;
+  padding: 25px 0 25px 195px;
   border: 10px solid white;
   border-radius: 5px;
   display: block;
@@ -890,10 +890,20 @@ span {
   font-family: "Barlow", sans-serif;
 }
 .ItemByOff .ItemByOff_slider .offer__item p {
-  overflow: hidden;
+  width: 65%;
+  margin: 0 auto;
 }
 .ItemByOff .ItemByOff_slider .offer__item ul {
-  margin-top: 15px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .ItemByOff .ItemByOff_slider .offer__item li a {
   width: 30px;
@@ -928,6 +938,9 @@ span {
   }
 }
 @media (min-width: 992px) {
+  .offer__item {
+    padding-left: 150px;
+  }
   .offer__item span {
     top: 44px !important;
     left: 143px !important;

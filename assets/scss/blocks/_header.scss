@@ -226,7 +226,7 @@
                 transition: opacity linear .5s, transform linear .5s;
                 width: 100%;
                 background-color: $white-color;
-                transform: translateX(-150px);
+                transform: translateX(150px);
                 transition-delay: calc(0.25s * var(--i));
 
                 a.nav-link-mobile {
@@ -396,8 +396,8 @@
         position: absolute;
         width: 45px;
         height: 55px;
-        bottom: 40%;
-        left: 5%;
+        top: 5%;
+        left: 26%;
         z-index: 1;
         animation: shake linear 1.5s infinite alternate;
     }
